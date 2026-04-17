@@ -1,0 +1,12 @@
+{
+    "name": "EcoHabit AI by dr.way",
+    "short_name": "EcoHabit",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#10b981",
+    "icons": [
+        { "src": "https://cdn-icons-png.flaticon.com/512/8243/8243015.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "https://cdn-icons-png.flaticon.com/512/8243/8243015.png", "sizes": "512x512", "type": "image/png" }
+    ]
+}
