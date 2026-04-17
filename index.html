@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>EcoHabit AI by dr.way</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1><i class="fa-solid fa-leaf text-glow"></i> EcoHabit</h1>
+            <p>บันทึกเพื่อโลก โดย <span class="dr-name">dr.way</span></p>
+        </header>
+
+        <div class="glass-card ai-coach">
+            <div class="ai-header">
+                <div class="ai-icon-bg"><i class="fa-solid fa-robot"></i></div>
+                <span class="ai-title">Cloudflare AI Coach</span>
+            </div>
+            <div class="ai-bubble">
+                <p id="ai-message">สวัสดีครับ! กดบันทึกกิจกรรมด้านล่างได้เลย เดี๋ยวผมให้คำแนะนำครับ 🌱</p>
+            </div>
+        </div>
+
+        <div class="glass-card dashboard">
+            <div class="streak-badge"><i class="fa-solid fa-fire"></i> <span id="streak-count">0</span> วันต่อเนื่อง</div>
+            <h2>คุณลดก๊าซเรือนกระจกไปแล้ว</h2>
+            <div class="score-display">
+                <span id="total-co2" class="number">0.0</span>
+                <span class="unit">kg CO₂e</span>
+            </div>
+            <p id="equivalency" class="eq-text">เทียบเท่ากับการปลูกต้นไม้ 0 ต้น 🌳</p>
+        </div>
+
+        <div class="glass-card actions">
+            <h3><i class="fa-solid fa-star"></i> วันนี้คุณทำอะไรบ้าง?</h3>
+            <button class="btn" onclick="addActivity(0.5, 'ใช้ถุงผ้าแทนถุงพลาสติก')">
+                <i class="fa-solid fa-bag-shopping"></i> ใช้ถุงผ้า/แก้วส่วนตัว <span class="plus">+0.5</span>
+            </button>
+            <button class="btn" onclick="addActivity(1.2, 'คัดแยกขยะพลาสติกและกระดาษ')">
+                <i class="fa-solid fa-recycle"></i> คัดแยกขยะรีไซเคิล <span class="plus">+1.2</span>
+            </button>
+            <button class="btn" onclick="addActivity(2.5, 'ทานอาหารมังสวิรัติ')">
+                <i class="fa-solid fa-leaf"></i> ทานมื้อ Plant-based <span class="plus">+2.5</span>
+            </button>
+            <button class="btn" onclick="addActivity(1.8, 'เดินหรือปั่นจักรยานแทนการใช้รถ')">
+                <i class="fa-solid fa-bicycle"></i> เดินหรือปั่นจักรยาน <span class="plus">+1.8</span>
+            </button>
+        </div>
+
+        <footer>
+            <div class="author-info">
+                <p>สร้างสรรค์แอปพลิเคชันโดย</p>
+                <div class="author-card">
+                    <strong>ผศ.ดร.พิสิษฐ์ สุวรรณแพทย์</strong>
+                    <span>(dr.way)</span>
+                </div>
+            </div>
+        </footer>
+        <div id="toast" class="toast">บันทึกความดีสำเร็จ! 🌍</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
